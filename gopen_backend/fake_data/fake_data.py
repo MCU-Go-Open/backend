@@ -2,6 +2,7 @@ from faker import Faker
 from models.course import Course,Teacher
 
 
+
 fake = Faker(['zh_TW'])
 
 def get_fake_teachers(size:int=1) -> list:

@@ -7,6 +7,7 @@ class Teacher:
   name: str
   hash: str
   type: str
+  
   def dict(self):
       return {k: str(v) for k, v in asdict(self).items()}
 

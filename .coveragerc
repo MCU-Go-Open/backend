@@ -1,0 +1,3 @@
+[run]
+omit = gopen_backend/fake_data/* \
+      */__init__.py

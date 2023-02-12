@@ -1,5 +1,5 @@
 from faker import Faker
-from model.course import Course
+from model.course import Course,Teacher
 
 
 fake = Faker(['zh_TW'])
@@ -7,11 +7,9 @@ fake = Faker(['zh_TW'])
 def get_fake_teachers(size:int=1) -> list:
   teacher_list = []
   for _ in range(size):
-    teacher_list.append({
-      'teacher_name' : fake.name(),
-      'teacher_hash' : fake.credit_card_number(),
-      'teacher_type' : fake.random_element(elements=('main','sub'))
-    })
+    teacher_list.append(
+      Teacher(fake.name(),fake.credit_card_number(),fake.random_element(elements=('main','sub')))
+    )
   return teacher_list
 
 

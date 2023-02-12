@@ -2,7 +2,6 @@ from fastapi import APIRouter
 from fake_data.fake_data import get_fake_courses
 from typing import List
 
-
 router = APIRouter()
 
 @router.get('/course')
@@ -17,4 +16,3 @@ def get_course(search:str="") -> list:
             if search in teacher.name:
                filter_courses.append(teacher)
    return filter_courses
-

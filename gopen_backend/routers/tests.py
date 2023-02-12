@@ -16,5 +16,5 @@ def get_course(search:str="") -> list:
          for teacher in course.teacher_list:
             if search in teacher.name:
                filter_courses.append(teacher)
-   return filter_courses
 
+   return filter_courses

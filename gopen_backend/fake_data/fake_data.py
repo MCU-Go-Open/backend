@@ -1,5 +1,5 @@
 from faker import Faker
-from model.course import Course,Teacher
+from models.course import Course,Teacher
 
 
 
